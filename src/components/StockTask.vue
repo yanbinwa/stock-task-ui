@@ -1,18 +1,26 @@
 <template>
   <div class="from_box">
     <form action="">
+      <label for="r1">选股策略</label>
       <input type="text"  placeholder="请输入选股策略" v-model="request.template">
+      <label for="r1">执行时间</label>
       <input type="text" placeholder="请输入执行时间" v-model="request.time">
+      <br><br>
+      <label for="r1">起始时间</label>
       <input type="text" placeholder="回测起始时间" v-model="request.startTime">
+      <label for="r1">终止时间</label>
       <input type="text" placeholder="回测终止时间" v-model="request.endTime">
-      <div>
-        <input type="text" placeholder="买入时间" v-model="request.buyRule.time">
-        <input type="text" placeholder="买入延后天数" v-model="request.buyRule.offset">
-      </div>
-      <div>
-        <input type="text" placeholder="卖出时间" v-model="request.saleRule.time">
-        <input type="text" placeholder="卖出延后天数" v-model="request.saleRule.offset">
-      </div>
+      <br><br>
+      <label for="r1">买入时间</label>
+      <input type="text" placeholder="买入时间" v-model="request.buyRule.time">
+      <label for="r1">买入延后天数</label>
+      <input type="text" placeholder="买入延后天数" v-model="request.buyRule.offset">
+      <br><br>
+      <label for="r1">卖出时间</label>
+      <input type="text" placeholder="卖出时间" v-model="request.saleRule.time">
+      <label for="r1">卖出延后天数</label>
+      <input type="text" placeholder="卖出延后天数" v-model="request.saleRule.offset">
+      <br><br>
     </form>
     <button @click="onSubmit()">提交</button>
   </div>
